@@ -11,6 +11,11 @@ def load_model():
     clf.model = load('models/ml/iris_rf_v1.joblib')
 
 
+@app.get('/', tags=["Intro"])
+async def hello():
+    return {"message": "Hello!"}
+
+
 @app.post('/predict', tags=["predictions"])
 async def get_prediction(iris: Iris):
     data = dict(iris)['data']
@@ -18,8 +23,4 @@ async def get_prediction(iris: Iris):
     log_proba = clf.model.predict_proba(data).tolist()
     print(log_proba)
     return {"prediction": prediction,
-           "log_proba": log_proba}
-
-
-
-
+            "log_proba": log_proba}
