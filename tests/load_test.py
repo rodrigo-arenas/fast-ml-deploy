@@ -17,5 +17,5 @@ class IrisPredict(TaskSet):
 class IrisLoadTest(HttpUser):
     tasks = [IrisPredict]
     host = 'http://127.0.0.1'
-    stop_timeout = 20
+    stop_timeout = 200
     wait_time = between(1, 5)
