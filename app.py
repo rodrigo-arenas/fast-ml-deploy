@@ -1,14 +1,14 @@
 import models.ml.classifier as clf
-from fastapi import FastAPI, Body
+from fastapi import FastAPI
 from joblib import load
 from models.iris import Iris
 
-app = FastAPI(title="Medium ML API", description="API for iris dataset ml model", version="1.0")
+app = FastAPI(title="Iris ML API", description="API for iris dataset ml model", version="1.0")
 
 
 @app.on_event('startup')
-def load_model():
-    clf.model = load('models/ml/iris_rf_v1.joblib')
+async def load_model():
+    clf.model = load('models/ml/iris_dt_v1.joblib')
 
 
 @app.get('/', tags=["Intro"])
