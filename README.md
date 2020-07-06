@@ -4,18 +4,13 @@ Example repo of machine learning model deployment with Fast API and Docker
 #Demo instructions
 
 
-### 1. Install requirements
-```
-pip install -r requirements.txt --no-cache-dir
-```
-
-### 2. Build the docker image
+### 1. Build the docker image
 
 ```
 docker build -t iris-ml-build .
 ```
 
-### 3. Run the container
+### 2. Run the container
 
 ```
 docker run -d -p 80:80 --name iris-api iris-ml-build 
