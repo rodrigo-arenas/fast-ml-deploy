@@ -15,4 +15,4 @@ pipeline = Pipeline(clf_pipeline)
 
 pipeline.fit(X, y)
 
-dump(pipeline, './ml/iris_rf_v1.joblib')
+dump(pipeline, './iris_dt_v1.joblib')
