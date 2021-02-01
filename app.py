@@ -21,6 +21,5 @@ async def get_prediction(iris: Iris):
     data = dict(iris)['data']
     prediction = clf.model.predict(data).tolist()
     log_proba = clf.model.predict_log_proba(data).tolist()
-    print(log_proba)
     return {"prediction": prediction,
             "log_proba": log_proba}
