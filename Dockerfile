@@ -1,5 +1,7 @@
 FROM tiangolo/uvicorn-gunicorn:python3.8-slim
 
+LABEL maintainer="https://github.com/rodrigoarenas456"
+
 WORKDIR /app
 
 ENV DEBIAN_FRONTEND=noninteractive
