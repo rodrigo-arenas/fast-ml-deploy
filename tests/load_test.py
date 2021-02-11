@@ -10,7 +10,7 @@ class IrisPredict(TaskSet):
     @task
     def predict(self):
         request_body = {"data": [[4.8, 3, 1.4, 0.3]]}
-        self.client.post('/predict', json=request_body)
+        self.client.post('/v1/iris/predict', json=request_body)
 
 
 class IrisLoadTest(HttpUser):
