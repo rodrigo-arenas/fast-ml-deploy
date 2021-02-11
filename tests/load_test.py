@@ -13,7 +13,6 @@ class IrisPredict(TaskSet):
         self.client.post('/predict', json=request_body)
 
 
-
 class IrisLoadTest(HttpUser):
     tasks = [IrisPredict]
     host = 'http://127.0.0.1'

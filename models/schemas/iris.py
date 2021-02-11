@@ -8,4 +8,5 @@ class Iris(BaseModel):
 
 class IrisPredictionResponse(BaseModel):
     prediction: List[int]
+    probability: List[Any]
     log_probability: List[Any]
