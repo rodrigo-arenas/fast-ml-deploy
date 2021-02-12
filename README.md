@@ -18,19 +18,23 @@ docker build -t iris-ml-build .
 docker run -d -p 80:80 --name iris-api iris-ml-build 
 ```
 
+### 3. Run Pytest with coverage
+```
+docker exec -it iris-api pytest --ignore=tests/ --cov=app tests/ --cov-config=.coveragerc
+```
 
-### 3. Go to localhost
+### 4. Go to localhost
 http://127.0.0.1/docs
 
 
-### 4. Try out the post /predict method
+### 5. Try out the post /predict method
 ```
 curl -X POST "http://127.0.0.1/predict" -H\
  "accept: application/json"\
  -H "Content-Type: application/json"\
  -d "{\"data\":[[4.8,3,1.4,0.3],[2,1,3.2,1.1]]}"
 ```
-### 5. Stop the server
+### 6. Stop the server
 ```
 ctrl + c
 ```
