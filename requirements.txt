@@ -10,3 +10,5 @@ joblib==0.16.0
 gunicorn==20.0.4
 pytest==6.2.2
 locust==1.4.3
+codecov==2.1.11
+pytest-cov==2.11.1

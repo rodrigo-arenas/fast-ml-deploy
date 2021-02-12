@@ -1,4 +1,4 @@
-from locust import HttpUser, TaskSet, task, between
+from locust import HttpUser, TaskSet, task, between, tag
 
 """
 Run locus with:
@@ -7,10 +7,16 @@ locust -f ./tests/load_test.py
 
 
 class IrisPredict(TaskSet):
+    @tag('Predictions')
     @task
     def predict(self):
         request_body = {"data": [[4.8, 3, 1.4, 0.3]]}
         self.client.post('/v1/iris/predict', json=request_body)
+
+    @tag('Baseline')
+    @task
+    def health_check(self):
+        self.client.get('/')
 
 
 class IrisLoadTest(HttpUser):
