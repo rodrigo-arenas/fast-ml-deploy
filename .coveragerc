@@ -1,0 +1,11 @@
+[run]
+omit =
+    ./tests/*
+    ./venv/*
+    ./docs/*
+[report]
+precision = 2
+show_missing = True
+sort = Cover
+[xml]
+output=./coverage.xml
