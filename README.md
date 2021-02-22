@@ -29,7 +29,7 @@ http://127.0.0.1/docs
 
 ### 5. Try out the post /predict method
 ```
-curl -X POST "http://127.0.0.1/predict" -H\
+curl -X POST "http://127.0.0.1/v1/iris/predictt" -H\
  "accept: application/json"\
  -H "Content-Type: application/json"\
  -d "{\"data\":[[4.8,3,1.4,0.3],[2,1,3.2,1.1]]}"
