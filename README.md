@@ -3,6 +3,8 @@ Example repo of machine learning model deployment with Fast API and Docker
 
 This is a minimalistic build, consider to use user auth in a production environment
 
+An article explaining the content of this repo can be found in this [medium link](https://medium.com/analytics-vidhya/serve-a-machine-learning-model-using-sklearn-fastapi-and-docker-85aabf96729b)
+
 # Demo instructions
 
 
@@ -33,8 +35,4 @@ curl -X POST "http://127.0.0.1/v1/iris/predictt" -H\
  "accept: application/json"\
  -H "Content-Type: application/json"\
  -d "{\"data\":[[4.8,3,1.4,0.3],[2,1,3.2,1.1]]}"
-```
-### 6. Stop the server
-```
-ctrl + c
 ```
