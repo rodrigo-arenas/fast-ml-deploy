@@ -1,5 +1,5 @@
 # fast-ml-deploy
-Example repo of machine learning model deployment with Fast API and Docker
+Example repo of machine learning model deployment with FastAPI and Docker
 
 This is a minimalistic build, consider to use user auth in a production environment
 
